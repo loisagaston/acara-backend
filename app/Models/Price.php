@@ -10,4 +10,6 @@ class Price extends Model
     use HasFactory;
     public $guarded = [];
     public $timestamps = false;
+    protected $table = 'precios';
+
 }

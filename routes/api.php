@@ -21,12 +21,14 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::prefix("v1")->group(function () {
-    Route::get('prices', [PriceController::class, 'index']);
-    Route::post('', [PriceController::class, 'store']);
-    Route::post('/import-prices', [PriceController::class, 'importPrices']);
-    Route::prefix("{price}")->group(function () {
-        Route::get('', [PriceController::class, 'show']);
-        Route::put('', [PriceController::class, 'update']);
-        Route::delete('', [PriceController::class, 'destroy']);
+    Route::prefix("prices")->group(function () {
+        Route::get('', [PriceController::class, 'index']);
+        Route::post('', [PriceController::class, 'store']);
+        Route::post('/import', [PriceController::class, 'importPrices']);
+        Route::prefix("{price}")->group(function () {
+            Route::get('', [PriceController::class, 'show']);
+            Route::put('', [PriceController::class, 'update']);
+            Route::delete('', [PriceController::class, 'destroy']);
+        });
     });
 });
