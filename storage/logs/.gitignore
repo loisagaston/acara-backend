@@ -1,0 +1,54 @@
+# Ignore the .env file which contains sensitive information
+.env
+
+# Ignore the storage directory
+/storage/*
+
+# Ignore vendor directory
+/vendor
+
+# Ignore node_modules directory if you are using npm or yarn
+/node_modules
+
+# Ignore Mix-manifest files
+/public/mix-manifest.json
+/public/mix
+
+# Ignore compiled PHP files
+/phpunit.xml
+/phpunit.result.cache
+/php-error.log
+
+# Ignore logs and other temporary files
+/storage/logs/*.log
+/public/storage
+/public/hot
+/public/*.js
+/public/*.css
+
+# Ignore anything in the public/images directory
+/public/images
+
+# Ignore IDE or editor specific files
+/.idea
+/.vscode
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore Homestead/Homestead.yaml file if you are using Laravel Homestead
+Homestead.yaml
+
+# Ignore composer lock file
+composer.lock
+
+# Ignore NPM/Yarn lock file
+package-lock.json
+yarn.lock
+
+# Ignore production environment file
+.env.production
+
+# Ignore any other sensitive or generated files
+/.env.*
