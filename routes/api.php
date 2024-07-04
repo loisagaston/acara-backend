@@ -24,7 +24,7 @@ Route::prefix("v1")->group(function () {
     Route::prefix("prices")->group(function () {
         Route::get('', [PriceController::class, 'index']);
         Route::post('', [PriceController::class, 'store']);
-        Route::post('/import', [PriceController::class, 'importPrices']);
+        Route::post('/import-prices', [PriceController::class, 'importPrices']);
         Route::prefix("{price}")->group(function () {
             Route::get('', [PriceController::class, 'show']);
             Route::put('', [PriceController::class, 'update']);
